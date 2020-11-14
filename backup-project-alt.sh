@@ -5,7 +5,7 @@
 # Encryption using openssl.
 
 # What to backup
-backup_files="~/Documents ~/Desktop /etc "
+backup_files="/root /etc /usr "
 
 # Where to backup to.
 dest="/mnt/backup"
