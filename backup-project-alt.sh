@@ -35,6 +35,6 @@ date
 
 echo "Cleaing files older than 3 days!"
 
-find /opt/backup -type f -mtime +30 -exec rm -f {} \;
+find $dest -type f -mtime +3 -exec rm -f {} \;
 
 exit 0
