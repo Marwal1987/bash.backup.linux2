@@ -34,7 +34,7 @@ function check_schedule {
 check_schedule
 
 # Backup the files with Tar and encrypt with openssl.
-tar czf $dest/"$archive_file" "$backup_files" | openssl enc -e -aes256 -out "$archive_file".tar.gz
+tar czf $dest/"$archive_file" "$backup_files" | openssl enc -e -aes256 -out "$archive_file"-secured.tar.gz
 
 # Print end status msg.
 echo
