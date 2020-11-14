@@ -20,7 +20,7 @@ echo "Backing up $backup_files to $dest/$archive_file"
 echo
 
 
-# Check to see if the script exists in daily cron directory
+# Check to see if the script exists in daily cron directory.
 function check_schedule {
   if [ ! -s "/etc/cron.daily/backupT5.sh" ]                           # -s means files exists and its size is greater than 0                
   then 
