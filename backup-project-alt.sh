@@ -28,7 +28,7 @@ tar czf $dest/"$archive_file" "$backup_files" | openssl enc -e -aes256 -out back
 
 # Print end status msg.
 echo
-echo "Backup finished"
+echo "Backup finished."
 date
 
 echo
