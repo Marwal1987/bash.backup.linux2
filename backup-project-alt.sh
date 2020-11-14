@@ -1,10 +1,8 @@
 #!/bin/bash
 # backup-project-alt.sh
 
-
 # Backup to NFS mount script.
 # Encryption using openssl.
-
 
 # What to backup
 backup_files="/var/spool/mail /etc /root /boot /opt"
@@ -34,11 +32,11 @@ echo "Backup finished"
 date
 
 echo
-echo "Cleaning files older than 3 days!"
+echo "Cleaning files older than 3 days."
 echo
 find $dest -type f -mtime +3 -exec rm -f {} \;
 
 echo
-echo "Cleaning finished!"
+echo "Cleaning finished."
 echo
 exit 0
