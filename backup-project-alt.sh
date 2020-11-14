@@ -5,7 +5,7 @@
 # Encryption using openssl.
 
 # What to backup
-backup_files="/var/spool/mail /etc /root /boot /opt"
+backup_files="~/Documents ~/Desktop /etc "
 
 # Where to backup to.
 dest="/mnt/backup"
