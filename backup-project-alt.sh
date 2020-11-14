@@ -34,6 +34,8 @@ function check_schedule {
        fi
 }
 
+check_schedule
+
 # Backup the files with Tar and encrypt with openssl.
 tar czf $dest/"$archive_file" "$backup_files" | openssl enc -e -aes256 -out backup_secured.tar.gz
 
