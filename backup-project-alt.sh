@@ -24,7 +24,7 @@ echo
 
 # Check to see if the script exists in daily cron directory
 function check_schedule {
-       if [ ! -s "/etc/cron.daily/make_backup" ]
+       if [ ! -s "/etc/cron.daily/check_schedule" ]
        then
           # Copy script to cron.daily dir
           sudo cp backup-project-alt.sh /etc/cron.daily/backup-project-alt            #Why sudo? The Cron directory is owned by root.
