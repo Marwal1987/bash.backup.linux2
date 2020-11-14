@@ -33,8 +33,12 @@ echo
 echo "Backup finished"
 date
 
-echo "Cleaing files older than 3 days!"
-
+echo
+echo "Cleaning files older than 3 days!"
+echo
 find $dest -type f -mtime +3 -exec rm -f {} \;
 
+echo
+echo "Cleaning finished!"
+echo
 exit 0
