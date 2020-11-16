@@ -36,7 +36,7 @@ check_schedule
 mkdir $dest
 
 # Make the tar command run in the destination directory
-cd $dest
+cd $dest || exit
 
 # Compress with tar
 tar -czvf $archive_file $backup_files                    
