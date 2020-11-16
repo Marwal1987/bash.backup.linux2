@@ -39,7 +39,7 @@ mkdir $dest
 cd $dest || exit
 
 # Compress with tar
-tar -czvf $archive_file $backup_files                    
+tar -czf $archive_file $backup_files                    
 
 # Print end status msg.
 echo
