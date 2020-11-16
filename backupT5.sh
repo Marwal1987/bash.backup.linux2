@@ -34,7 +34,7 @@ function check_schedule {
 check_schedule
 
 # Backup the files with Tar and encrypt with openssl.
-tar czf $dest/"$archive_file" "$backup_files" | openssl enc -e -aes256 -out "$archive_file"-secured.tar.gz
+tar czf $dest/"$archive_file" "$backup_files"
 
 # Print end status msg.
 echo
@@ -43,7 +43,7 @@ echo "Backup finished."
 echo
 echo "Cleaning files older than 3 days."
 echo
-find $dest -type f -mtime +3 -exec rm -fr {} \;                        # 
+find $dest -type f -mtime +3 -exec rm -fr {} \;                       # 
 
 echo
 echo "Cleaning finished."
