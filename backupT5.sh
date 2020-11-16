@@ -33,7 +33,7 @@ function check_schedule {
 check_schedule
 
 # Compress with tar
-tar -czvf $dest/"$archive_file" "$backup_files"                       
+tar -czvf $dest/$archive_file $backup_files                    
 
 # Print end status msg.
 echo
