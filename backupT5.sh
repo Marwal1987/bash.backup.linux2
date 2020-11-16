@@ -5,7 +5,7 @@
 # Compress using tar.
 
 # What to backup.
-backup_files="/home /root /etc /usr"
+backup_files="/home /root /etc "
 
 # Where to backup to.
 dest="/mnt/backup"
