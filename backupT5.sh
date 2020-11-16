@@ -33,13 +33,13 @@ function check_schedule {
 check_schedule
 
 # Make the backup directory
-mkdir $dest
+mkdir $dest 2>/dev/null
 
-# Make the tar command run in the destination directory
+# Move to destination, if not possibe, exit the cript
 cd $dest || exit
 
 # Compress with tar
-tar -czf $archive_file $backup_files                    
+tar -czf $archive_file $backup_files 2>/dev/null
 
 # Print end status msg.
 echo
