@@ -1,8 +1,8 @@
 #!/bin/bash
 # backupT5.sh
-
+# Run with root priviliges 
 # Backup to NFS mount script.
-# Encryption using openssl.
+# Compress using tar.
 
 # What to backup.
 backup_files="/home /root /etc /usr"
@@ -33,7 +33,7 @@ function check_schedule {
 
 check_schedule
 
-# Backup the files with Tar and encrypt with openssl.
+# Compress with tar
 tar czf $dest/"$archive_file" "$backup_files"
 
 # Print end status msg.
