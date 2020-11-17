@@ -27,7 +27,6 @@ function check {
    echo "2 * * * * /etc/cron.daily/backupT5" >> /etc/crontab
    echo "The backup has been set to run daily"
    echo "The exact run time is in the /etc/crontab file."
-  exit 1
   fi
 }
 
