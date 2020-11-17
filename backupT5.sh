@@ -21,9 +21,9 @@ echo
 
 # Check to see if the script exists in daily cron directory.
 function check_schedule {
-  if [ ! -s "/etc/cron.daily/backupT5.sh" ]                   # -s means files exists and its size is greater than 0                
+  if [ ! -s "/etc/cron.daily/backupT5" ]                   # -s means files exists and its size is greater than 0                
   then 
-   cp backupT5.sh /etc/cron.daily/backupT5.sh
+   cp backupT5.sh /etc/cron.daily/backupT5
    echo "The backup has been set to run daily"
    echo "The exact run time is in the /etc/crontab file."
   exit 1
