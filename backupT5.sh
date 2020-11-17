@@ -36,7 +36,7 @@ check
 # Make the backup directory
 mkdir -p $dest 2>/dev/null
 
-# Move to destination, if not possibe, exit the cript
+# Move to the destination the tar file should be
 cd $dest
 
 # Compress with tar
