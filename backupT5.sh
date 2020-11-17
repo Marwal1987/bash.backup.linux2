@@ -16,8 +16,7 @@ hostname=$(hostname -s)                                       # -s  means shortv
 archive_file="$hostname-$day"
 
 # Print start status msg.
-echo "Backing up $backup_files to $dest/$archive_file"
-echo
+echo "Backing up $backup_files to $dest/$archive_file\n"
 
 # Check to see if the script exists in daily cron directory.
 function check {
@@ -43,16 +42,10 @@ tar -czf "$archive_file".tgz $backup_files 2>/dev/null
 ## Make a for loop to make one backup of each directory at row 8
 
 # Print end status msg.
-echo
-echo "Backup finished."
+echo "Backup finished.\n"
 
 echo
-echo "Cleaning files older than 3 days."
-echo
+echo "Cleaning files older than 3 days.\n"
 find $dest -type f -mtime +3 -exec rm -rf {} \;              # mtime = measure time. +3, 3 days  -f filename -r recursive
-
-echo
-echo "Cleaning finished."
-echo
 
 exit 0
