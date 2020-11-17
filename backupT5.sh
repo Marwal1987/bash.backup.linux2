@@ -23,7 +23,7 @@ echo
 function check {
   if [ ! -s "/etc/cron.daily/backupT5" ]                   # -s means files exists and its size is greater than 0                
   then 
-   cp "$0"/etc/cron.daily/backupT5
+   cp "$0" /etc/cron.daily/backupT5
    echo "2 * * * * /etc/cron.daily/backupT5" > /etc/crontab
    echo "The backup has been set to run daily"
    echo "The exact run time is in the /etc/crontab file."
