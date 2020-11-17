@@ -23,7 +23,7 @@ echo
 function check_schedule {
   if [ ! -s "/etc/cron.daily/backupT5.sh" ]                   # -s means files exists and its size is greater than 0                
   then 
-   cp backupT5.sh /etc/cron.daily/backupT5.sh            # Why sudo? The Cron directory is owned by root.
+   cp backupT5.sh /etc/cron.daily/backupT5.sh
    echo "The backup has been set to run daily"
    echo "The exact run time is in the /etc/crontab file."
   exit 1
