@@ -39,8 +39,8 @@ mkdir -p $dest 2>/dev/null
 cd $dest
 
 # Compress with tar
-tar -czf $archive_file $backup_files 2>/dev/null
-## Make a for loop to make one backup of each directory at row 8, this is also the right place to name the file with .tgz
+tar -czf "$archive_file".tgz $backup_files 2>/dev/null
+## Make a for loop to make one backup of each directory at row 8
 
 # Print end status msg.
 echo
