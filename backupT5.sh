@@ -32,17 +32,6 @@ function check_schedule {
 
 check_schedule
 
-function check_crontab {
-  if [ grep cron.daily -s /etc/crontab ]                   # -s means files exists and its size is greater than 0                
-  then 
-   cp backupT5.sh /etc/cron.daily/backupT5
-   echo "The backup has been set to run daily"
-  exit 1
-  fi
-}
-
-check_crontab
-
 # Make the backup directory
 mkdir -p $dest 2>/dev/null
 
