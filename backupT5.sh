@@ -44,7 +44,6 @@ tar -czf "$archive_file".tgz $backup_files 2>/dev/null
 # Print end status msg.
 echo "Backup finished.\n"
 
-echo
 echo "Cleaning files older than 3 days.\n"
 find $dest -type f -mtime +3 -exec rm -rf {} \;              # mtime = measure time. +3, 3 days  -f filename -r recursive
 
