@@ -26,8 +26,8 @@ function check {
    cp $0 /etc/cron.daily/backupT5
    ##############
    crontab -e 5 * * * * /etc/cron.daily/backupT5
-   echo $
-   echo $0
+   echo "$"
+   echo "$0"
    ##############
    echo "The backup has been set to run daily"
    echo "The exact run time is in the /etc/crontab file."
