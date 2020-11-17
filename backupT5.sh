@@ -49,7 +49,7 @@ echo "Backup finished."
 echo
 echo "Cleaning files older than 3 days."
 echo
-find $dest -type f -mtime +3 -exec rm -rf {} \;              # mtime = measure time. +3, 3 dag  -f filename -r recursive
+find $dest -type f -mtime +3 -exec rm -rf {} \;              # mtime = measure time. +3, 3 days  -f filename -r recursive
 
 echo
 echo "Cleaning finished."
