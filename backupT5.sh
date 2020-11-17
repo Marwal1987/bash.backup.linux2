@@ -13,7 +13,7 @@ dest="/mnt/backup"
 # Create archive filename.
 day=$(date +%A)                                               # +%A means show current weekday.
 hostname=$(hostname -s)                                       # -s  means shortversion of hostname. Cut at first dot.
-archive_file="$hostname-$day.tgz"     ## adding .tgz in a variable might be confusing when it is not a .tgz file yet
+archive_file="$hostname-$day"
 
 # Print start status msg.
 echo "Backing up $backup_files to $dest/$archive_file"
@@ -33,10 +33,10 @@ function check_schedule {
 check_schedule
 
 # Make the backup directory
-mkdir $dest 2>/dev/null ## mkdir needs -p for recursive creation
+mkdir -p $dest 2>/dev/null
 
 # Move to destination, if not possibe, exit the cript
-cd $dest || exit ## Will always work when mkdir -p is used
+cd $dest
 
 # Compress with tar
 tar -czf $archive_file $backup_files 2>/dev/null
