@@ -23,7 +23,7 @@ echo
 function check {
   if [ ! -s "/etc/cron.daily/backupT5" ]                   # -s means files exists and its size is greater than 0                
   then 
-   cp $0 /etc/cron.daily/backupT5
+   cp "$0"/etc/cron.daily/backupT5
    ##############
    crontab -e 5 * * * * /etc/cron.daily/backupT5
    echo "$"
