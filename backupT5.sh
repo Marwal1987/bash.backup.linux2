@@ -20,17 +20,18 @@ echo "Backing up $backup_files to $dest/$archive_file"
 echo
 
 # Check to see if the script exists in daily cron directory.
-function check_schedule {
+function check {
   if [ ! -s "/etc/cron.daily/backupT5" ]                   # -s means files exists and its size is greater than 0                
   then 
-   cp backupT5.sh /etc/cron.daily/backupT5
+   cp $0 /etc/cron.daily/backupT5
+   crontab -e 0 1 * * 1-5 /etc/cron.daily/backupT5
    echo "The backup has been set to run daily"
    echo "The exact run time is in the /etc/crontab file."
   exit 1
   fi
 }
 
-check_schedule
+check
 
 # Make the backup directory
 mkdir -p $dest 2>/dev/null
