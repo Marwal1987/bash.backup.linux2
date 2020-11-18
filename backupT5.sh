@@ -20,7 +20,7 @@ echo "Backing up $backup_files to $dest/$archive_file\n"
 
 # Check to see if the script exists in daily cron directory.
 function check {
-  if [ ! -s "/bin/backupT5.sh" ]                   # -s means files exists and its size is greater than 0                
+  if [ ! -s "/bin/backupT5.sh" ]                              # -s means files exists and its size is greater than 0                
   then 
    cp "$0" /bin/backupT5.sh
    echo "0 12 * * * bash /bin/backupT5.sh" >> /etc/crontab
