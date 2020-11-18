@@ -23,7 +23,7 @@ function check {
   if [ ! -s "/bin/backupT5.sh" ]                   # -s means files exists and its size is greater than 0                
   then 
    cp "$0" /bin/backupT5.sh
-   echo "0 12 * * * /bin/backupT5.sh" >> /etc/crontab
+   echo "0 12 * * * bash /bin/backupT5.sh" >> /etc/crontab
    echo "The backup has been set to run daily"
    echo "The exact run time is in the /etc/crontab file."
   fi
