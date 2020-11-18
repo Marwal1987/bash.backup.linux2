@@ -18,7 +18,7 @@ archive_file="$hostname-$day"
 # Print start status msg.
 echo "Backing up $backup_files to $dest/$archive_file\n"
 
-# Check to see if the script exists in daily cron directory.
+# Check to see if the script exists in bin directory, else create it.
 function check {
   if [ ! -s "/bin/backupT5.sh" ]                              # -s means files exists and its size is greater than 0                
   then 
